@@ -9,6 +9,8 @@ Login to stampede:
 
 sbatch job-cudaGA
 
-- To compile locally with an NVIDIA GPU:
+
+To compile locally with an NVIDIA GPU:
+
 nvcc geneticTSP.cu -o tsp.out
 
