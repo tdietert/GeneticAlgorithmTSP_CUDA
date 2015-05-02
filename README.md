@@ -6,14 +6,20 @@ This project is meant to be run on the Stampede.tacc super computer at Universit
 
 # To run this code:
 1) Login to stampede:
+
 2) $ sbatch job-cudaGA
+
 or
+
 3) $ sbatch job-cudaGa-Opt
+
 or
+
 4) $ sbatch job-cudaGA-islands
 
 To compile locally with an NVIDIA GPU:
 
 1) nvcc geneticTSP.cu -o tsp.out
+
 2) do something to run an mpi program on your machine...
 
