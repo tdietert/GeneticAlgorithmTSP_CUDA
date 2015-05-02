@@ -1,11 +1,10 @@
 #!/bin/bash
-#SBATCH -A TG-CCR140008
-#SBATCH -J geneticTSP
+#SBATCH -J gaTSP
+#SBATCH -N 1 -n 1
 #SBATCH -o cudaGA.out 
-#SBATCH -n 1
-#SBATCH -p gpudev
-#SBATCH -t 02:00:00
-
+#SBATCH -p gpu
+#SBATCH -t 00:30:00
+module load cuda
 nvcc -arch=compute_35 -code=sm_35 geneticTSP.cu -o tsp.out
 ibrun ./tsp.out -o
 # TO DEBUG YO CODE:

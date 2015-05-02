@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH -J gaTSP-Islands
+#SBATCH -o cudaGA-dataCollection.out
+#SBATCH -n 1 
+#SBATCH -p gpudev
+#SBATCH -t 00:60:00
+module load cuda
+nvcc -arch=compute_35 -code=sm_35 geneticTSPIslands_Opt.cu -o tsp_islands.out
+ibrun ./tsp_islands.out -o
+nvcc -arch=compute_35 -code=sm_35 geneticTSP.cu -o tsp.out
+ibrun ./tsp.out -o
+
