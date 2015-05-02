@@ -17,7 +17,7 @@ or
 
 4) $ sbatch job-cudaGA-islands
 
-To compile locally with an NVIDIA GPU:
+# To compile locally with an NVIDIA GPU:
 
 1) nvcc geneticTSP.cu -o tsp.out
 
